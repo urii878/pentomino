@@ -1,4 +1,6 @@
+# PUBLIC_URL: 公開時に実URLへ変更
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://example.com/pentomino/sitemap.xml
+
