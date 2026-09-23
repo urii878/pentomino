@@ -1,77 +1,54 @@
-// ================================
-// 新作ごとに基本的にここを編集
-// ================================
+// PUBLIC_URL: 公開URLはHTML・robots.txt・sitemap.xmlと同期してください。
 window.GAME_CONFIG = {
-  id: "sample-game",
-  title: "サンプルゲーム",
-  shortDescription: "テンプレート動作確認用のサンプルゲームです。",
-  seoTitle: "サンプルゲーム｜無料で遊べるブラウザゲーム",
-  description: "サンプルゲームを無料で遊べます。スマホ・PC対応、インストール不要です。",
-  keywords: [
-    "無料ゲーム",
-    "ブラウザゲーム",
-    "パズル"
+  "id": "pentomino",
+  "title": "ペントミノ",
+  "shortDescription": "12のかたちを、ぴったりひとつに。",
+  "seoTitle": "ペントミノ|無料で遊べる脳トレ・パズルゲーム",
+  "description": "ペントミノを無料で遊べるブラウザパズルゲームです。12種類のピースを回転・反転させて盤面を埋めよう。スマホ・PC対応、インストール不要です。",
+  "keywords": [
+    "ペントミノ",
+    "ペントミノ パズル",
+    "ペントミノ ゲーム",
+    "ペントミノ 無料",
+    "ペントミノ オンライン"
   ],
-
-  canonicalUrl: "https://example.com/",
-  ogImage: "./assets/og-image.png",
-
-  portalName: "アタマアソビ",
-  portalUrl: "https://example.com/",
-
-  eyebrow: "無料・インストール不要",
-
-  // ページ下部の説明。HTML可。
-  howToHtml: `
-    <ol>
-      <li>ゲームを開始します。</li>
-      <li>画面の指示に従って操作します。</li>
-      <li>終了すると結果画面が表示されます。</li>
-    </ol>
-  `,
-  aboutHtml: `
-    <p>
-      ここにゲームの由来・ルール・特徴・検索ユーザーが知りたい情報を記載します。
-      単なるSEO文章ではなく、初めて遊ぶ人にも役立つ内容にしてください。
-    </p>
-  `,
-
-  faq: [
+  "canonicalUrl": "https://pentomino.vercel.app/",
+  "ogImage": "https://pentomino.vercel.app/assets/og-image.png",
+  "portalName": "アタマアソビ",
+  "portalUrl": "https://atama-asobi.vercel.app/",
+  "eyebrow": "無料・インストール不要",
+  "howToHtml": "<ul><li>ドラッグで配置</li><li>タップで90°回転</li><li>ダブルタップで左右反転</li><li>すべて埋めるとクリア</li></ul><p>練習のヒントは1回につき30秒加算されます。本番は12種類すべてを使う共通問題で、ヒントは使えません。</p>",
+  "aboutHtml": "<p>ペントミノは、5個の正方形を辺でつないでできる12種類のピースを組み合わせて盤面を埋める定番パズルです。</p><p>入門は3ピース、基礎は5ピース、応用は8ピース。練習で形に慣れたら、12ピースのペントミノに挑戦しましょう。</p>",
+  "faq": [
     {
-      q: "無料で遊べますか？",
-      a: "はい。ブラウザ上で無料で遊べます。"
+      "q": "無料で遊べますか？",
+      "a": "はい。ペントミノを無料で遊べます。インストールや会員登録は不要です。"
     },
     {
-      q: "スマホでも遊べますか？",
-      a: "はい。スマホ・タブレット・PCに対応しています。"
+      "q": "スマホでも遊べますか？",
+      "a": "はい。スマホでは指、PCではマウスで操作できます。"
     },
     {
-      q: "インストールは必要ですか？",
-      a: "必要ありません。ブラウザからそのまま遊べます。"
+      "q": "ピースはどうやって回転しますか？",
+      "a": "ピースをタップすると90°回転します。素早く2回タップすると左右反転します。"
+    },
+    {
+      "q": "本来のペントミノはどのモードですか？",
+      "a": "ホーム最上部の「ペントミノ」です。12種類すべてで60マスを埋める本番モードで、ランキングの対象です。"
     }
   ],
-
-  // 広告
-  ads: {
-    enabled: false
+  "ads": {
+    "enabled": false
   },
-
-  // ランキング
-  ranking: {
-    enabled: false,
-
-    // trueにした場合は下記を自分のSupabaseに置き換える。
-    supabaseUrl: "https://YOUR_PROJECT.supabase.co",
-    supabaseAnonKey: "YOUR_PUBLISHABLE_OR_ANON_KEY",
-    table: "sample_scores",
-
-    // "desc" = 高得点順 / "asc" = タイムなど小さいほど良い
-    sortDirection: "desc",
-
-    // 同点時の追加ソート。不要なら null
-    secondaryColumn: null,
-    secondaryDirection: "asc",
-
-    limit: 10
+  "ranking": {
+    "enabled": true,
+    "supabaseUrl": "https://nbwcdvqhzgxjpnzgtvqn.supabase.co",
+    "supabaseAnonKey": "sb_publishable_lO1k_kKGXt6yrHA2QehHGg_DzCvlvE9",
+    "table": "pentomino_scores",
+    "sortDirection": "asc",
+    "secondaryColumn": "moves",
+    "secondaryDirection": "asc",
+    "limit": 10
   }
 };
+

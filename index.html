@@ -1,648 +1,115 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1,viewport-fit=cover"
-  />
-
-  <!--
-    =========================================
-    新作ごとに必ず変更するSEO部分
-    =========================================
-
-    「ゲームタイトル」
-    「ゲーム説明」
-    「https://example.com/」
-
-    を新しいゲーム用に直接書き換える。
-
-    config.js だけに任せず、
-    HTMLにもゲーム固有情報を入れておく。
-  -->
-
-  <title id="page-title">
-    ゲームタイトル｜無料で遊べるブラウザゲーム
-  </title>
-
-  <meta
-    id="meta-description"
-    name="description"
-    content="ゲーム説明。無料・スマホ対応・インストール不要で遊べるブラウザゲームです。"
-  />
-
-  <meta
-    id="meta-keywords"
-    name="keywords"
-    content="ゲームタイトル, 無料ゲーム, ブラウザゲーム"
-  />
-
-  <link
-    id="canonical-link"
-    rel="canonical"
-    href="https://example.com/"
-  />
-
-  <!-- OGP -->
-  <meta property="og:type" content="website" />
-
-  <meta
-    id="og-title"
-    property="og:title"
-    content="ゲームタイトル｜無料で遊べるブラウザゲーム"
-  />
-
-  <meta
-    id="og-description"
-    property="og:description"
-    content="ゲーム説明。無料・スマホ対応・インストール不要で遊べます。"
-  />
-
-  <meta
-    id="og-image"
-    property="og:image"
-    content="./assets/og-image.png"
-  />
-
-  <meta
-    id="og-url"
-    property="og:url"
-    content="https://example.com/"
-  />
-
-  <!-- X / Twitter -->
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    id="twitter-title"
-    name="twitter:title"
-    content="ゲームタイトル｜無料で遊べるブラウザゲーム"
-  />
-
-  <meta
-    id="twitter-description"
-    name="twitter:description"
-    content="ゲーム説明。無料・スマホ対応・インストール不要で遊べます。"
-  />
-
-  <meta
-    id="twitter-image"
-    name="twitter:image"
-    content="./assets/og-image.png"
-  />
-
-  <!-- 構造化データ -->
-  <script
-    id="game-structured-data"
-    type="application/ld+json"
-  >
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ゲームタイトル",
-    "description": "ゲーム説明。無料で遊べるブラウザゲームです。",
-    "url": "https://example.com/",
-    "applicationCategory": "GameApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "JPY"
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title id="page-title">ペントミノ|無料で遊べる脳トレ・パズルゲーム</title>
+<meta id="meta-description" name="description" content="ペントミノを無料で遊べるブラウザパズルゲームです。12種類のピースを回転・反転させて盤面を埋めよう。スマホ・PC対応、インストール不要です。">
+<meta id="meta-keywords" name="keywords" content="ペントミノ,ペントミノ パズル,ペントミノ ゲーム,ペントミノ 無料,ペントミノ オンライン">
+<!-- PUBLIC_URL: 公開URLを変更する場合は index.html / js/config.js / robots.txt / sitemap.xml を同期。 -->
+<link id="canonical-link" rel="canonical" href="https://pentomino.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta id="og-title" property="og:title" content="ペントミノ|無料で遊べる脳トレ・パズルゲーム">
+<meta id="og-description" property="og:description" content="ペントミノを無料で遊べるブラウザパズルゲームです。12種類のピースを回転・反転させて盤面を埋めよう。スマホ・PC対応、インストール不要です。">
+<meta id="og-url" property="og:url" content="https://pentomino.vercel.app/">
+<meta id="og-image" property="og:image" content="https://pentomino.vercel.app/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta id="twitter-title" name="twitter:title" content="ペントミノ|無料で遊べる脳トレ・パズルゲーム">
+<meta id="twitter-description" name="twitter:description" content="ペントミノを無料で遊べるブラウザパズルゲームです。12種類のピースを回転・反転させて盤面を埋めよう。スマホ・PC対応、インストール不要です。">
+<meta id="twitter-image" name="twitter:image" content="https://pentomino.vercel.app/assets/og-image.png">
+<script id="game-structured-data" type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ペントミノ",
+  "description": "ペントミノを無料で遊べるブラウザパズルゲームです。12種類のピースを回転・反転させて盤面を埋めよう。スマホ・PC対応、インストール不要です。",
+  "url": "https://pentomino.vercel.app/",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
   }
-  </script>
-
-  <link
-    rel="icon"
-    href="./assets/favicon.png"
-    type="image/png"
-  />
-
-  <link
-    rel="stylesheet"
-    href="./css/style.css"
-  />
-
-  <!--
-    AdSenseを使う場合はここへ貼る。
-
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
-      crossorigin="anonymous">
-    </script>
-  -->
-
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "無料で遊べますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ペントミノを無料で遊べます。インストールや会員登録は不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スマホでも遊べますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。スマホでは指、PCではマウスで操作できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ピースはどうやって回転しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ピースをタップすると90°回転します。素早く2回タップすると左右反転します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "本来のペントミノはどのモードですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ホーム最上部の「ペントミノ」です。12種類すべてで60マスを埋める本番モードで、ランキングの対象です。"
+      }
+    }
+  ]
+}</script>
+<link rel="icon" href="./assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="./css/style.css">
+<!-- AdSenseを利用する場合はここにコードを配置し、config.jsのads.enabledを変更。 -->
 </head>
-
 <body>
-
-  <header class="site-header">
-
-    <div class="shell header-inner">
-
-      <a
-        id="portal-link-top"
-        class="brand"
-        href="#"
-        rel="noopener"
-      >
-        <span class="brand-mark">A</span>
-        <span>アタマアソビ</span>
-      </a>
-
-      <button
-        id="howto-open"
-        class="ghost-btn"
-        type="button"
-      >
-        遊び方
-      </button>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- ======================
-         ゲームタイトル
-    ======================= -->
-
-    <section class="hero shell">
-
-      <p
-        id="eyebrow"
-        class="eyebrow"
-      >
-        無料・インストール不要
-      </p>
-
-      <h1 id="game-title">
-        ゲームタイトル
-      </h1>
-
-      <p
-        id="game-lead"
-        class="lead"
-      >
-        ゲーム説明。
-        何をするゲームなのかを1〜2文で分かりやすく記載します。
-      </p>
-
-    </section>
-
-
-    <!-- ======================
-         ゲーム本体
-    ======================= -->
-
-    <section
-      class="game-shell shell"
-      aria-label="ゲーム"
-    >
-
-      <div class="game-toolbar">
-
-        <div>
-
-          <div class="toolbar-label">
-            SCORE
-          </div>
-
-          <div
-            id="score-display"
-            class="toolbar-value"
-          >
-            0
-          </div>
-
-        </div>
-
-
-        <div>
-
-          <div class="toolbar-label">
-            TIME
-          </div>
-
-          <div
-            id="time-display"
-            class="toolbar-value"
-          >
-            --
-          </div>
-
-        </div>
-
-
-        <div class="toolbar-actions">
-
-          <button
-            id="game-reset"
-            class="small-btn"
-            type="button"
-          >
-            リセット
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <div
-        id="game-root"
-        class="game-root"
-      >
-
-        <!--
-          game.js がここにゲーム本体を描画
-        -->
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================
-         広告
-    ======================= -->
-
-    <section
-      id="ad-section"
-      class="shell content-card ad-card"
-      hidden
-    >
-
-      <p class="section-kicker">
-        ADVERTISEMENT
-      </p>
-
-      <div id="ad-slot">
-        広告枠
-      </div>
-
-    </section>
-
-
-    <!-- ======================
-         遊び方
-    ======================= -->
-
-    <section class="shell content-card">
-
-      <p class="section-kicker">
-        HOW TO PLAY
-      </p>
-
-      <h2>
-        遊び方
-      </h2>
-
-      <div id="howto-content">
-
-        <p>
-          ゲーム固有の遊び方をここにも直接記載します。
-          JavaScript読み込み後はconfig.jsの内容で上書きされます。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================
-         ゲーム説明
-    ======================= -->
-
-    <section class="shell content-card">
-
-      <p class="section-kicker">
-        ABOUT
-      </p>
-
-      <h2 id="about-title">
-        ゲームタイトルについて
-      </h2>
-
-      <div id="about-content">
-
-        <p>
-          ゲームの由来、ルール、特徴など、
-          検索して来た人に役立つ説明を直接記載します。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================
-         ランキング
-    ======================= -->
-
-    <section
-      id="ranking-section"
-      class="shell content-card"
-      hidden
-    >
-
-      <div class="section-head">
-
-        <div>
-
-          <p class="section-kicker">
-            RANKING
-          </p>
-
-          <h2>
-            ランキング
-          </h2>
-
-        </div>
-
-
-        <button
-          id="ranking-refresh"
-          class="small-btn"
-          type="button"
-        >
-          更新
-        </button>
-
-      </div>
-
-
-      <p
-        id="ranking-note"
-        class="muted"
-      ></p>
-
-      <div
-        id="ranking-list"
-        class="ranking-list"
-      ></div>
-
-    </section>
-
-
-    <!-- ======================
-         FAQ
-    ======================= -->
-
-    <section class="shell content-card">
-
-      <p class="section-kicker">
-        FAQ
-      </p>
-
-      <h2>
-        よくある質問
-      </h2>
-
-      <div
-        id="faq-list"
-        class="faq-list"
-      >
-
-        <details class="faq-item">
-
-          <summary>
-            無料で遊べますか？
-          </summary>
-
-          <p>
-            はい。ブラウザ上で無料で遊べます。
-          </p>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            スマホでも遊べますか？
-          </summary>
-
-          <p>
-            はい。スマホ・タブレット・PCに対応しています。
-          </p>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            インストールは必要ですか？
-          </summary>
-
-          <p>
-            必要ありません。
-            ブラウザからそのまま遊べます。
-          </p>
-
-        </details>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================
-         アタマアソビ
-    ======================= -->
-
-    <section class="shell back-card">
-
-      <div>
-
-        <strong>
-          ほかの無料ゲームも遊ぶ
-        </strong>
-
-        <p>
-          短時間で遊べる無料ブラウザゲームを公開しています。
-        </p>
-
-      </div>
-
-
-      <a
-        id="portal-link-bottom"
-        class="primary-btn"
-        href="#"
-        rel="noopener"
-      >
-        アタマアソビへ
-      </a>
-
-    </section>
-
-  </main>
-
-
-  <!-- ======================
-       フッター
-  ======================= -->
-
-  <footer class="site-footer">
-
-    <div class="shell footer-inner">
-
-      <span id="footer-game-name">
-        ゲームタイトル
-      </span>
-
-      <nav>
-
-        <a href="./privacy.html">
-          プライバシーポリシー
-        </a>
-
-        <a
-          id="portal-link-footer"
-          href="#"
-          rel="noopener"
-        >
-          アタマアソビ
-        </a>
-
-      </nav>
-
-    </div>
-
-  </footer>
-
-
-  <!-- ======================
-       遊び方モーダル
-  ======================= -->
-
-  <dialog id="howto-dialog">
-
-    <div class="dialog-inner">
-
-      <div class="dialog-head">
-
-        <h2>
-          遊び方
-        </h2>
-
-        <button
-          id="howto-close"
-          class="icon-btn"
-          type="button"
-          aria-label="閉じる"
-        >
-          ×
-        </button>
-
-      </div>
-
-      <div id="howto-dialog-content"></div>
-
-    </div>
-
-  </dialog>
-
-
-  <!-- ======================
-       リザルト
-  ======================= -->
-
-  <dialog id="result-dialog">
-
-    <div class="dialog-inner result-inner">
-
-      <p class="section-kicker">
-        RESULT
-      </p>
-
-      <h2 id="result-title">
-        ゲーム終了
-      </h2>
-
-      <div
-        id="result-stats"
-        class="result-stats"
-      ></div>
-
-
-      <form
-        id="ranking-form"
-        class="ranking-form"
-        hidden
-      >
-
-        <label for="player-name">
-          ランキング登録名
-        </label>
-
-
-        <div class="ranking-form-row">
-
-          <input
-            id="player-name"
-            name="name"
-            maxlength="12"
-            autocomplete="nickname"
-            placeholder="No Name"
-          />
-
-          <button
-            class="primary-btn"
-            type="submit"
-          >
-            登録
-          </button>
-
-        </div>
-
-
-        <p
-          id="ranking-form-message"
-          class="muted"
-        ></p>
-
-      </form>
-
-
-      <div class="result-actions">
-
-        <button
-          id="result-retry"
-          class="primary-btn"
-          type="button"
-        >
-          もう一度
-        </button>
-
-        <button
-          id="result-close"
-          class="ghost-btn"
-          type="button"
-        >
-          閉じる
-        </button>
-
-      </div>
-
-    </div>
-
-  </dialog>
-
-
-  <script src="./js/config.js"></script>
-  <script src="./js/ranking.js"></script>
-  <script src="./js/common.js"></script>
-  <script src="./js/game.js"></script>
-
+<header class="site-header"><div class="shell header-inner">
+<a id="portal-link-top" class="brand" href="https://atama-asobi.vercel.app/"><span class="brand-mark">A</span><span>アタマアソビ</span></a>
+<button id="howto-open" class="ghost-btn" type="button">遊び方</button>
+</div></header>
+<main>
+<section class="hero shell"><p id="eyebrow" class="eyebrow">無料・インストール不要</p><h1 id="game-title">ペントミノ</h1><p id="game-lead" class="lead">12のかたちを、ぴったりひとつに。</p></section>
+<section id="home-screen" class="shell content-card home-card" aria-label="モード選択">
+<button class="main-mode" data-mode="expert" type="button"><strong>ペントミノ</strong><span>12ピース · ランキングに挑戦</span><span class="mode-arrow" aria-hidden="true">→</span></button>
+<h2 class="practice-title">練習</h2>
+<div class="practice-modes">
+<button data-mode="easy" type="button"><strong>入門</strong><span>3ピース</span></button>
+<button data-mode="normal" type="button"><strong>基礎</strong><span>5ピース</span></button>
+<button data-mode="hard" type="button"><strong>応用</strong><span>8ピース</span></button>
+</div>
+<div class="name-field"><label for="player-name">ランキング登録名</label><input id="player-name" maxlength="12" autocomplete="nickname" placeholder="No Name" aria-describedby="name-note"><p id="name-note" class="muted">最大12文字。本番クリア時に名前・タイム・操作回数を自動登録します。</p></div>
+<noscript>ペントミノを遊ぶにはJavaScriptを有効にしてください。</noscript>
+</section>
+<section id="play-screen" class="game-shell shell" aria-label="ペントミノのプレイ画面" hidden>
+<div class="game-toolbar"><div class="play-heading"><strong>ペントミノ</strong><span id="mode-label"></span></div><div><div class="toolbar-label">PIECES</div><div id="score-display" class="toolbar-value">0 / 12</div></div><div><div class="toolbar-label">TIME</div><div id="time-display" class="toolbar-value">00:00.0</div></div></div>
+<div class="play-actions"><button id="game-reset" class="small-btn" type="button">リセット</button><button id="game-hint" class="small-btn" type="button">ヒント</button><button id="game-giveup" class="small-btn" type="button">あきらめる</button></div>
+<p class="operation-guide">ドラッグで配置、タップで90°回転、ダブルタップで左右反転できます。</p>
+<div id="game-root" class="game-root"><div id="board-area"><div id="board" aria-label="パズル盤面"></div></div><div id="piece-tray" aria-label="ピーストレー"></div></div>
+<p id="game-message" role="status" aria-live="polite"></p>
+</section>
+<section id="ranking-section" class="shell content-card"><div class="section-head"><div><p class="section-kicker">RANKING</p><h2>ペントミノ TOP10</h2></div><button id="ranking-refresh" class="small-btn" type="button">更新</button></div><p class="muted">12ピース本番のみ。タイム → 操作回数 → 登録日時の順で順位が決まります。</p><p id="ranking-note" class="muted" role="status"></p><div id="ranking-list" class="ranking-list"></div></section>
+<section id="ad-section" class="shell content-card ad-card" hidden><p class="section-kicker">ADVERTISEMENT</p><div id="ad-slot">広告枠</div></section>
+<section class="shell content-card"><p class="section-kicker">HOW TO PLAY</p><h2>遊び方</h2><div id="howto-content"><ul><li>ドラッグで配置</li><li>タップで90°回転</li><li>ダブルタップで左右反転</li><li>すべて埋めるとクリア</li></ul><p>練習のヒントは1回につき30秒加算されます。本番は12種類すべてを使う共通問題で、ヒントは使えません。</p></div></section>
+<section class="shell content-card"><p class="section-kicker">ABOUT</p><h2 id="about-title">ペントミノについて</h2><div id="about-content"><p>ペントミノは、5個の正方形を辺でつないでできる12種類のピースを組み合わせて盤面を埋める定番パズルです。</p><p>入門は3ピース、基礎は5ピース、応用は8ピース。練習で形に慣れたら、12ピースのペントミノに挑戦しましょう。</p></div></section>
+<section class="shell content-card"><p class="section-kicker">FAQ</p><h2>よくある質問</h2><div id="faq-list"><details class="faq-item"><summary>無料で遊べますか？</summary><p>はい。ペントミノを無料で遊べます。インストールや会員登録は不要です。</p></details><details class="faq-item"><summary>スマホでも遊べますか？</summary><p>はい。スマホでは指、PCではマウスで操作できます。</p></details><details class="faq-item"><summary>ピースはどうやって回転しますか？</summary><p>ピースをタップすると90°回転します。素早く2回タップすると左右反転します。</p></details><details class="faq-item"><summary>本来のペントミノはどのモードですか？</summary><p>ホーム最上部の「ペントミノ」です。12種類すべてで60マスを埋める本番モードで、ランキングの対象です。</p></details></div></section>
+<section class="shell back-card"><div><strong>ほかの無料ゲームも遊ぶ</strong><p>短時間で遊べる無料ブラウザゲームを公開しています。</p></div><a id="portal-link-bottom" class="primary-btn" href="https://atama-asobi.vercel.app/">アタマアソビへ</a></section>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><span id="footer-game-name">ペントミノ</span><nav><a href="./privacy.html">プライバシーポリシー</a><a id="portal-link-footer" href="https://atama-asobi.vercel.app/">アタマアソビ</a></nav></div></footer>
+<dialog id="howto-dialog"><div class="dialog-inner"><div class="dialog-head"><h2>遊び方</h2><button id="howto-close" class="icon-btn" type="button" aria-label="閉じる">×</button></div><div id="howto-dialog-content"></div></div></dialog>
+<dialog id="result-dialog" aria-labelledby="result-title"><div class="dialog-inner result-inner"><p class="section-kicker">RESULT</p><h2 id="result-title">クリア！</h2><div id="result-stats" class="result-stats"></div><p id="result-message" role="status"></p><div class="result-actions"><button id="result-retry" class="primary-btn" type="button">同じ問題をもう一度</button><button id="result-next" class="ghost-btn" type="button">次の問題</button><button id="result-home" class="ghost-btn" type="button">ホームへ</button></div></div></dialog>
+<script src="./js/config.js"></script><script src="./js/ranking.js"></script><script src="./js/common.js"></script><script src="./js/game.js"></script>
 </body>
 </html>
+

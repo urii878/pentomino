@@ -1,4 +1,6 @@
+# PUBLIC_URL: 公開URLを変更する場合は他のSEO設定と同期
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://pentomino.vercel.app/sitemap.xml
+
