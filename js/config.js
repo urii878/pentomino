@@ -1,9 +1,9 @@
-// PUBLIC_URL: 公開時は仮URLをHTML・robots.txt・sitemap.xmlと同期してください。
+// PUBLIC_URL: 公開URLはHTML・robots.txt・sitemap.xmlと同期してください。
 window.GAME_CONFIG = {
   "id": "pentomino",
   "title": "ペントミノ",
   "shortDescription": "12のかたちを、ぴったりひとつに。",
-  "seoTitle": "ペントミノ｜無料で遊べるパズルゲーム",
+  "seoTitle": "ペントミノ|無料で遊べる脳トレ・パズルゲーム",
   "description": "ペントミノを無料で遊べるブラウザパズルゲームです。12種類のピースを回転・反転させて盤面を埋めよう。スマホ・PC対応、インストール不要です。",
   "keywords": [
     "ペントミノ",
@@ -12,8 +12,8 @@ window.GAME_CONFIG = {
     "ペントミノ 無料",
     "ペントミノ オンライン"
   ],
-  "canonicalUrl": "https://example.com/pentomino/",
-  "ogImage": "./assets/og-image.png",
+  "canonicalUrl": "https://pentomino.vercel.app/",
+  "ogImage": "https://pentomino.vercel.app/assets/og-image.png",
   "portalName": "アタマアソビ",
   "portalUrl": "https://atama-asobi.vercel.app/",
   "eyebrow": "無料・インストール不要",

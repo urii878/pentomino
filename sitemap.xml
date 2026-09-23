@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PUBLIC_URL: 公開時に実URLへ変更 -->
+<!-- PUBLIC_URL: 公開URLを変更する場合は他のSEO設定と同期 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/pentomino/</loc></url>
-  <url><loc>https://example.com/pentomino/privacy.html</loc></url>
+  <url><loc>https://pentomino.vercel.app/</loc></url>
+  <url><loc>https://pentomino.vercel.app/privacy.html</loc></url>
 </urlset>
 

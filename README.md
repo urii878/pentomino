@@ -13,20 +13,21 @@
 
 ## 公開URL・画像
 
-公開URLが未確定のため `https://example.com/pentomino/` を仮URLにしています。公開前に以下を同じ本番URLへ変更してください。
+公開URL： https://pentomino.vercel.app/
 
-- `index.html`：canonical・og:url・構造化データのurl
-- `js/config.js`：canonicalUrl
-- `robots.txt`：Sitemap
-- `sitemap.xml`：各loc
-- OGP画像差し替え時は `index.html` のog:image・twitter:imageと `js/config.js` のogImageを公開画像の絶対URLへ変更
-- faviconは `assets/favicon.png` を差し替え
+SEOタイトル：ペントミノ|無料で遊べる脳トレ・パズルゲーム
+
+index.html と js/config.js のタイトル・OGP・Twitter情報、canonical、構造化データ、robots.txt、sitemap.xmlは公開URLに同期済みです。
+OGP画像は https://pentomino.vercel.app/assets/og-image.png を指定しています。
+画像の内容はテンプレートのままです。専用画像への変更は assets/og-image.png と assets/favicon.png を差し替えてください。
 
 アタマアソビ： https://atama-asobi.vercel.app/
 
 ## 動作確認
 
-ユーザーの指示により、ブラウザ・スマホでの動作確認、テスト実行、Supabaseへの確認用登録は実施していません。
+2026-09-23にローカルブラウザで本番12ピースの完成、練習3モード、回転・反転・ドラッグ、リセット・再プレイ、ヒント加算、名前保存、スマホ3サイズの表示を確認しました。
+実Supabaseからのランキング取得を確認し、自動登録はローカルの受信先で1回だけ送信されることを確認しました。公開ランキングへのテスト登録は行っていません。
+詳細・未確認範囲は QA.md を参照してください。
 
 ---
 
